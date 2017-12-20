@@ -9,23 +9,27 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <!--BootStrap 4-->
     <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-	<script src="js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<!--FIM-->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
     <title>Início</title>
 </head>
 
 <body>
-    <div id="Cabecalho" class="row fixed-top">
+    <div id="Cabecalho" class="row">
     	<div class="col-4">
-    		<p style="margin-top: 1.4vh">Início</p>
+    		<p>Início</p>
     	</div>
-    	<div class="col-8 text-right" style="padding: 1vh 2vw 1vh 0;">
+    	<div class="col-8 text-right">
     		<form>
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Pesquisar" aria-label="Pesquisar" id="caixaPesquisa">
+				<div class="input-group" style="height: 6.75vw; padding-top: 1.7vw">
+					<input type="text" class="form-control" placeholder="Pesquisar" aria-label="Pesquisar" id="caixaPesquisa" style="height: 6.75vw">
 					<span class="input-group-btn">
-						<button class="btn btn-link" type="button" id="botaoPesquisa" style="color: white"><i class="fas fa-search" id="Pesquisa"></i></button>
+						<button class="btn btn-link" type="button" id="botaoPesquisa" style="color: white; padding: 0;">
+							<i class="fas fa-search" id="Pesquisa" style="font-size: 6.75vw;"></i>
+						</button>
 					</span>
 				</div>
     		</form>	
@@ -33,17 +37,81 @@
     </div>
 
     <div id="Corpo" class="row">
-    	
+        <img class="ads" id="ads1" class="img-fluid">
+        <img class="ads" id="ads2">
+        <img class="ads" id="ads3">
     </div>
     
-    <div id="Rodape" class="row fixed-bottom">
-    	Rodape
+    <div id="Rodape" class="row fixed-bottom text-center">
+    	<div style="width: 19vw">
+    		<i class="fas fa-location-arrow"></i>
+    	</div>
+		<div style="width: 19vw">
+	    	<i class="fas fa-star"></i>
+    	</div>
+		<div style="width: 22vw">
+	    	<i class="fas fa-home"></i>
+    	</div>
+    	<div style="width: 19vw">
+	    	<i class="fas fa-tags"></i>
+    	</div>
+    	<div style="width: 19vw">
+	    	<i class="fas fa-info"></i>
+    	</div>
     </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
+
+    <!--SCRIPTS-->
+        <!--Firebase-->
+        <!--
+            <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+            <script>
+                // Inicializando Firebase
+                var config = {
+                    apiKey: "AIzaSyC5ycfXqjVpKQZqsQ-soPB_FCe_3wqs0hE",
+                    authDomain: "teste-e3241.firebaseapp.com",
+                    databaseURL: "https://teste-e3241.firebaseio.com",
+                    projectId: "teste-e3241",
+                    storageBucket: "teste-e3241.appspot.com",
+                    messagingSenderId: "401343167321"
+                };
+                firebase.initializeApp(config);
+
+                //Carregar imagem do storage
+                //Criação de referencia a raiz do storage
+                var storage = firebase.storage();
+                var storageRef = storage.ref();
+                
+                //Acessando o arquivo
+                storageRef.child('ads/Ads1.png').getDownloadURL().then(function(url) {
+                    //Variável de referencia onde será inserido a imagem
+                    var img = document.getElementById('ads1');
+                    img.src = url;
+                    }).catch(function(error) {
+                        //Em caso de erro
+                    });
+                storageRef.child('ads/Ads2.png').getDownloadURL().then(function(url) {
+                    //Variável de referencia onde será inserido a imagem
+                    var img = document.getElementById('ads2');
+                    img.src = url;
+                    }).catch(function(error) {
+                        //Em caso de erro
+                    });
+                storageRef.child('ads/Ads3.png').getDownloadURL().then(function(url) {
+                    //Variável de referencia onde será inserido a imagem
+                    var img = document.getElementById('ads3');
+                    img.src = url;
+                    }).catch(function(error) {
+                        //Em caso de erro
+                    });
+            </script>
+        -->
+        <!--Firebase-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    <!--SCRIPTS-->
 </body>
 
 </html>

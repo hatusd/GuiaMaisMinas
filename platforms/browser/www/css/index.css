@@ -7,7 +7,6 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color:#F4F4F4;
-    background-attachment:fixed;
     height:100%;
     margin:0px;
     padding:0px;
@@ -30,6 +29,16 @@ body p{
     font-size: 6.75vw;
 }
 
+#Rodape{
+    padding: 1vw;
+    font-size: 9vw;
+}
+
 #caixaPesquisa{
     visibility: hidden;
+}
+
+.ads{
+    width: 100vw;
+    border: 1px solid black;
 }
