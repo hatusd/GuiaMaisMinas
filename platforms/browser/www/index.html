@@ -37,7 +37,7 @@
     </div>
 
     <div id="Corpo" class="row">
-        <img src="" id="ads1" style="width: 100vw">
+        <img src="" id="ads1">
         <img class="ads" id="ads2">
         <img class="ads" id="ads3">
     </div>
@@ -99,6 +99,7 @@
                     //Variável de referencia onde será inserido a imagem
                     var img = document.getElementById('ads3');
                     img.src = url;
+                    img.width = "100%";
                     }).catch(function(error) {
                         //Em caso de erro
                     });
