@@ -21,7 +21,7 @@ var app = {
         var cab = document.getElementById('Cabecalho').offsetHeight;
         var rod = document.getElementById('Rodape').offsetHeight;
         var cor = vih - (cab+rod);
-        var ima = cor/3;
+        var ima = (cor/3)-1;
         var cli =  document.getElementsByClassName("ads");
         var i;
         alert(ima);
