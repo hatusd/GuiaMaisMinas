@@ -21,15 +21,16 @@ var app = {
         var cab = document.getElementById('Cabecalho').offsetHeight;
         var rod = document.getElementById('Rodape').offsetHeight;
         var cor = vih - (cab+rod);
-        var ima = (cor/3)-1;
+        var ima = cor/3;
         var cli =  document.getElementsByClassName("ads");
         var i;
-        alert(ima);
+        
         for (i = 0; i < cli.length; i++) {
-           cli[i].height = ima;
-           cli[i].width = viw;
+            cli[i].height = ima;
+            cli[i].width = viw;
+            alert(viw);
         }
-        cli[0].style.marginTop = cab + "px";
+        //cli[0].style.marginTop = cab + "px";
         var config = {
                     apiKey: "AIzaSyC5ycfXqjVpKQZqsQ-soPB_FCe_3wqs0hE",
                     authDomain: "teste-e3241.firebaseapp.com",
@@ -64,7 +65,6 @@ var app = {
             //Variável de referencia onde será inserido a imagem
             var img = document.getElementById('ads3');
             img.src = url;
-            img.width = "100%";
             }).catch(function(error) {
                 //Em caso de erro
             });
