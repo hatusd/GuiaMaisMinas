@@ -2,6 +2,8 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        // document.body.style.minHeight = window.innerHeight;
+        // document.body.style.maxHeight = window.innerHeight;
     },
     // Bind Event Listeners
     //
@@ -27,8 +29,6 @@ var app = {
             listeningElement.setAttribute('style', 'display:none;');
             receivedElement.setAttribute('style', 'display:block;');
         }
-
-
         console.log('Received Event: ' + id);
     }
 };
