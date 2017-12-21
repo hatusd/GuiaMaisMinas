@@ -2,8 +2,6 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        // document.body.style.minHeight = window.innerHeight;
-        // document.body.style.maxHeight = window.innerHeight;
     },
     // Bind Event Listeners
     //
