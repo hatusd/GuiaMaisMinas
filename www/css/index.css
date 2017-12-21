@@ -25,13 +25,17 @@ body p{
 }
 
 #Cabecalho{
-    width: 100vw;
-    font-size: 6.75vw;
+    width: 100%;
+    font-size: 4.278vh;
+    min-height: 9.507vh;
+    max-height: 9.507vh;
 }
 
 #Rodape{
-    padding: 1vw;
-    font-size: 9vw;
+    padding: 0.634vh;
+    font-size: 5.704vh;
+    min-height: 9.742vh;
+    max-height: 9.742vh;
 }
 
 #caixaPesquisa{
@@ -39,8 +43,8 @@ body p{
 }
 
 .ads{
-    width: 100vw;
-    margin-left: 4.3vw; 
-    min-height: 42.59vw;
-    max-height: 42.59vw;
+    width: 100%;
+    margin-left: 2.725vh; 
+    min-height: 26.917vh;
+    max-height: 26.917vh;
 }
