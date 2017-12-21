@@ -25,8 +25,8 @@ var app = {
         var img =  document.getElementsByClassName("ads");
         var i;
         for (i = 0; i < img.length; i++) {
-           img[i].style.height = ima;
-           img[i].style.width = viw;
+           img[i].height = ima;
+           img[i].width = viw;
         }
         alert(ima);
         var config = {
