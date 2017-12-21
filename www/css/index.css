@@ -32,7 +32,7 @@ body p{
 
 #Rodape{
     /*padding: 0.634vh;*/
-    font-size: 5vh;
+    font-size: 2em;
     /*min-height: 9.742vh;*/
     /*max-height: 9.742vh;*/
 }
@@ -41,7 +41,7 @@ body p{
     visibility: hidden;
 }
 
-.adsp{
+.ads{
     margin-top: 2.84em;
 }
 

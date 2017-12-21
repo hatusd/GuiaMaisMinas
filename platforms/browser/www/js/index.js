@@ -16,6 +16,19 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        var vih = window.innerHeight;
+        var viw = window.innerWidth;
+        var cab = document.getElementById('Cabecalho').offsetHeight;
+        var rod = document.getElementById('Rodape').offsetHeight;
+        var cor = vih - (cab+rod);
+        var ima = cor/3;
+        var img =  document.getElementsByClassName("ads");
+        var i;
+        for (i = 0; i < img.length; i++) {
+           img[i].style.height = ima;
+           img[i].style.width = viw;
+        }
+        alert(ima);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
