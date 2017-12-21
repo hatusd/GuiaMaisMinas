@@ -22,14 +22,14 @@ var app = {
         var rod = document.getElementById('Rodape').offsetHeight;
         var cor = vih - (cab+rod);
         var ima = cor/3;
-        var img =  document.getElementsByClassName("ads");
+        var cli =  document.getElementsByClassName("ads");
         var i;
         alert(ima);
-        for (i = 0; i < img.length; i++) {
-           img[i].height = ima;
-           img[i].width = viw;
+        for (i = 0; i < cli.length; i++) {
+           cli[i].height = ima;
+           cli[i].width = viw;
         }
-        img[0].style.marginTop = cab + "px";
+        cli[0].style.marginTop = cab + "px";
         var config = {
                     apiKey: "AIzaSyC5ycfXqjVpKQZqsQ-soPB_FCe_3wqs0hE",
                     authDomain: "teste-e3241.firebaseapp.com",
