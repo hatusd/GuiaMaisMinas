@@ -29,7 +29,7 @@ var app = {
            img[i].height = ima;
            img[i].width = viw;
         }
-        img[0].style.marginTop = cab;
+        img[0].style.marginTop = cab + "px";
         var config = {
                     apiKey: "AIzaSyC5ycfXqjVpKQZqsQ-soPB_FCe_3wqs0hE",
                     authDomain: "teste-e3241.firebaseapp.com",
