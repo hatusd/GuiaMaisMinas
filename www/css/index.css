@@ -40,10 +40,3 @@ body p{
 #caixaPesquisa{
     visibility: hidden;
 }
-
-.ads{
-    width: 100%;
-    margin-left: 2.725vh; 
-    min-height: 26.917vh;
-    max-height: 26.917vh;
-}
