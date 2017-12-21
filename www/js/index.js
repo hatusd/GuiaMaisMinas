@@ -29,6 +29,44 @@ var app = {
            img[i].style.width = viw;
         }
         alert(ima);
+        var config = {
+                    apiKey: "AIzaSyC5ycfXqjVpKQZqsQ-soPB_FCe_3wqs0hE",
+                    authDomain: "teste-e3241.firebaseapp.com",
+                    databaseURL: "https://teste-e3241.firebaseio.com",
+                    projectId: "teste-e3241",
+                    storageBucket: "teste-e3241.appspot.com",
+                    messagingSenderId: "401343167321"
+                };
+                firebase.initializeApp(config);
+
+                //Carregar imagem do storage
+                //Criação de referencia a raiz do storage
+                var storage = firebase.storage();
+                var storageRef = storage.ref();
+                
+                //Acessando o arquivo
+                storageRef.child('ads/Ads1.png').getDownloadURL().then(function(url) {
+                    //Variável de referencia onde será inserido a imagem
+                    var img = document.getElementById('ads1');
+                    img.src = url;
+                    }).catch(function(error) {
+                        //Em caso de erro
+                    });
+                storageRef.child('ads/Ads2.png').getDownloadURL().then(function(url) {
+                    //Variável de referencia onde será inserido a imagem
+                    var img = document.getElementById('ads2');
+                    img.src = url;
+                    }).catch(function(error) {
+                        //Em caso de erro
+                    });
+                storageRef.child('ads/Ads3.png').getDownloadURL().then(function(url) {
+                    //Variável de referencia onde será inserido a imagem
+                    var img = document.getElementById('ads3');
+                    img.src = url;
+                    img.width = "100%";
+                    }).catch(function(error) {
+                        //Em caso de erro
+                    });
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
