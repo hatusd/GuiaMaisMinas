@@ -44,3 +44,7 @@ body p{
 .ads{
     margin-top: 2.84em;
 }
+
+img{
+    max-width: 100%;
+}
