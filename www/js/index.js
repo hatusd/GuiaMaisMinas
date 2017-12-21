@@ -30,7 +30,7 @@ var app = {
             cli[i].width = viw;
             alert(viw);
         }
-        //cli[0].style.marginTop = cab + "px";
+        cli[0].style.marginTop = cab + "px";
         var config = {
                     apiKey: "AIzaSyC5ycfXqjVpKQZqsQ-soPB_FCe_3wqs0hE",
                     authDomain: "teste-e3241.firebaseapp.com",
